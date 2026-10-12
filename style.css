@@ -1,0 +1,212 @@
+:root {
+  color-scheme: light;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --color-ink: #172b4d;
+  --color-muted: #66758b;
+  --color-primary: #2563eb;
+  --color-primary-hover: #1d4ed8;
+  --color-border: #dbe5f0;
+  --color-surface: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--color-ink);
+  background:
+    radial-gradient(ellipse at 15% 10%, rgb(255 255 255 / 78%), transparent 34%),
+    linear-gradient(135deg, #d9efff 0%, #e9f3ff 48%, #dce8ff 100%);
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 20px;
+}
+
+.card {
+  width: min(100%, 460px);
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid rgb(255 255 255 / 75%);
+  border-radius: 28px;
+  background: rgb(255 255 255 / 88%);
+  box-shadow: 0 24px 70px rgb(38 74 125 / 16%);
+  backdrop-filter: blur(16px);
+}
+
+.header {
+  width: 100%;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0 0 8px;
+  color: var(--color-ink);
+  font-size: clamp(1.75rem, 6vw, 2rem);
+  font-weight: 750;
+  letter-spacing: -0.045em;
+}
+
+.header p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.search-row {
+  width: 100%;
+  margin-bottom: 22px;
+}
+
+.search-form {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+.search-form input {
+  flex: 1;
+  min-width: 0;
+  height: 48px;
+  padding: 0 15px;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  outline: none;
+  color: var(--color-ink);
+  background: var(--color-surface);
+  font: inherit;
+  font-size: 0.95rem;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.search-form input::placeholder {
+  color: #91a0b3;
+}
+
+.search-form input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px rgb(37 99 235 / 13%);
+}
+
+.search-form button {
+  min-width: 112px;
+  height: 48px;
+  padding: 0 16px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  border: 0;
+  border-radius: 14px;
+  color: #fff;
+  background: var(--color-primary);
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 650;
+  cursor: pointer;
+  transition: background-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+
+.search-form button p {
+  margin: 0;
+}
+
+.search-form button:hover {
+  background: var(--color-primary-hover);
+  box-shadow: 0 6px 16px rgb(37 99 235 / 22%);
+}
+
+.search-form button:active {
+  transform: translateY(1px);
+}
+
+.search-form button:focus-visible {
+  outline: 3px solid rgb(37 99 235 / 35%);
+  outline-offset: 3px;
+}
+
+.weather-info {
+  width: 100%;
+  min-height: 300px;
+  padding: 26px 20px 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #e4edfa;
+  border-radius: 22px;
+  background: linear-gradient(155deg, #f7fbff 0%, #edf5ff 100%);
+  text-align: center;
+}
+
+#city-name {
+  max-width: 100%;
+  margin: 0 0 12px;
+  overflow-wrap: anywhere;
+  color: var(--color-ink);
+  font-size: clamp(1.4rem, 5vw, 1.75rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  text-transform: capitalize;
+}
+
+#weather-icon {
+  margin-bottom: 8px;
+  color: #f5a623;
+  font-size: 3rem;
+  filter: drop-shadow(0 5px 10px rgb(245 166 35 / 20%));
+}
+
+#temperature {
+  margin: 0 0 4px;
+  color: #1d4ed8;
+  font-size: clamp(3rem, 12vw, 3.5rem);
+  font-weight: 750;
+  letter-spacing: -0.07em;
+  line-height: 1.1;
+}
+
+#description {
+  margin: 0 0 16px;
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.extra-info {
+  width: 100%;
+  min-height: 58px;
+  margin-top: auto;
+  padding: 12px 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  border: 1px solid #e2eaf5;
+  border-radius: 15px;
+  color: #50627a;
+  background: rgb(255 255 255 / 80%);
+  font-size: 0.875rem;
+  font-weight: 550;
+}
+
+.extra-info p {
+  margin: 0;
+}
