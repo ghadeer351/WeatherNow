@@ -42,10 +42,6 @@ No API key is required for the Open-Meteo endpoints used by this project.
 - `style.css` — layout and visual styling
 - `script.js` — geocoding, weather requests, and UI updates
 
-## Live Demo
-
-[Open WeatherNow on GitHub Pages](https://ghadeer351.github.io/WeatherNow/)
-
 ## Author
 
 **Ghadeer Debo** — [GitHub](https://github.com/ghadeer351)
